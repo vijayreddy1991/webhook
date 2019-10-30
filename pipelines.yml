@@ -29,7 +29,7 @@ pipelines:
             env1: value1
             env2: value2
           integrations:
-            - name: github
+            - name: git
           inputResources:
             - name: gitresource
         execution:
