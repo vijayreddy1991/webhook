@@ -1,5 +1,5 @@
 resources:
-  - name: bitbucketresource
+  - name: gitresource
     type: GitRepo
     configuration:
       gitProvider: github
@@ -31,7 +31,7 @@ pipelines:
           integrations:
             - name: github
           inputResources:
-            - name: bitbucketresource
+            - name: gitresource
         execution:
           onStart:
              - echo "Preparing for work..."
