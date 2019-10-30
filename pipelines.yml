@@ -2,7 +2,7 @@ resources:
   - name: gitresource
     type: GitRepo
     configuration:
-      gitProvider: github
+      gitProvider: git
       path: vijayreddy1991/dummy
       files:  # optional
         include: pipelines.sh
