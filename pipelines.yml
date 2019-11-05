@@ -5,7 +5,7 @@ resources:
       gitProvider: git
       path: vijayreddy1991/dummy
       files:  # optional
-        include: pipelines.sh
+#         include: pipelines.sh
         exclude: readme
       branches:  # optional
         include: master 
