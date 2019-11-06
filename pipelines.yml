@@ -18,24 +18,6 @@ resources:
          tagCreate: false
       shallowDepth: 10  # optional 
 
-  - name: gitres
-    type: GitRepo
-    configuration:
-      gitProvider: git
-      path: vijayreddy1991/dummy
-      files:  # optional
-#         include: pipelines.sh
-        exclude: readme
-      branches:  # optional
-        include: master 
-        exclude: readme
-      buildOn:  # optional
-         commit: false
-         pullRequestCreate: true
-         pullRequestClose: true
-         releaseCreate: true
-         tagCreate: false
-      shallowDepth: 10  # optional
 
 pipelines:
 
@@ -63,30 +45,4 @@ pipelines:
             - echo "uh oh, something went wrong"
           onComplete: #always
             - echo "Cleaning up some stuff"  
-pipelines:
 
-  - name: pipelines
-
-    steps:
-      - name: s_Bash1
-        type: Bash
-        configuration:
-          environmentVariables:
-            env1: value1
-            env2: value2
-          integrations:
-            - name: git
-          inputResources:
-            - name: gitres
-        execution:
-          onStart:
-             - echo "Preparing for work..."
-          onExecute:
-            - printenv
-            - printenv
-          onSuccess:
-            - echo "Job well done!"
-          onFailure:
-            - echo "uh oh, something went wrong"
-          onComplete: #always
-            - echo "Cleaning up some stuff" 
