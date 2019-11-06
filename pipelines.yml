@@ -11,7 +11,7 @@ resources:
         include: master 
         exclude: readme
       buildOn:  # optional
-         commit: true
+         commit: false
          pullRequestCreate: true
          pullRequestClose: true
          releaseCreate: true
