@@ -58,7 +58,7 @@ pipelines:
 pipelines:
 
   - name: pipelines_False
-
+    steps:
       - name: s_BashTriggerFalse
         type: Bash
         configuration:
