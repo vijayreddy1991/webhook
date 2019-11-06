@@ -53,7 +53,6 @@ pipelines:
           onExecute:
             - printenv 
 
-pipelines:
 
   - name: pipelines_False
     steps:
@@ -68,4 +67,3 @@ pipelines:
         execution:              
           onExecute:
             - printenv
-
