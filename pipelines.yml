@@ -63,6 +63,9 @@ pipelines:
             - echo "uh oh, something went wrong"
           onComplete: #always
             - echo "Cleaning up some stuff"  
+pipelines:
+
+  - name: pipelines
 
     steps:
       - name: s_Bash1
