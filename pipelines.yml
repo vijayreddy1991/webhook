@@ -4,24 +4,42 @@ resources:
     configuration:
       gitProvider: git
       path: vijayreddy1991/dummy
-#       files:  # optional
-# #         include: pipelines.sh
-#         exclude: readme
-#       branches:  # optional
-#         include: master 
-#         exclude: readme
-#       buildOn:  # optional
-#          commit: true
-#          pullRequestCreate: true
-#          pullRequestClose: true
-#          releaseCreate: true
-#          tagCreate: false
-#       shallowDepth: 10  # optional 
+      files:  # optional
+#         include: pipelines.sh
+        exclude: readme
+      branches:  # optional
+        include: master 
+        exclude: readme
+      buildOn:  # optional
+         commit: true
+         pullRequestCreate: true
+         pullRequestClose: true
+         releaseCreate: true
+         tagCreate: false
+      shallowDepth: 10  # optional 
 
+  - name: gitres
+    type: GitRepo
+    configuration:
+      gitProvider: git
+      path: vijayreddy1991/dummy
+      files:  # optional
+#         include: pipelines.sh
+        exclude: readme
+      branches:  # optional
+        include: master 
+        exclude: readme
+      buildOn:  # optional
+         commit: false
+         pullRequestCreate: true
+         pullRequestClose: true
+         releaseCreate: true
+         tagCreate: false
+      shallowDepth: 10  # optional 
 
 pipelines:
 
-  - name: pipelines_auto
+  - name: pipelines_true
     steps:
       - name: s_BashTriggerTrue
         type: Bash
@@ -33,10 +51,13 @@ pipelines:
             - name: git
           inputResources:
             - name: gitresource
-              trigger: true
         execution:
           onExecute:
             - printenv 
+
+pipelines:
+
+  - name: pipelines_False
 
       - name: s_BashTriggerFalse
         type: Bash
@@ -47,8 +68,7 @@ pipelines:
           integrations:
             - name: git
           inputResources:
-            - name: gitresource
-              trigger: false
+            - name: gitres
         execution:              
           onExecute:
             - printenv
