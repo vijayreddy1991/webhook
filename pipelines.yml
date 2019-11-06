@@ -35,16 +35,8 @@ pipelines:
             - name: gitresource
               trigger: true
         execution:
-          onStart:
-             - echo "Preparing for work..."
           onExecute:
-            - printenv
-          onSuccess:
-            - echo "Job well done!"
-          onFailure:
-            - echo "uh oh, something went wrong"
-          onComplete: #always
-            - echo "Cleaning up some stuff"  
+            - printenv 
 
       - name: s_BashTriggerFalse
         type: Bash
@@ -57,6 +49,7 @@ pipelines:
           inputResources:
             - name: gitresource
               trigger: false
+        execution:              
           onExecute:
             - printenv
 
