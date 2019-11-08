@@ -14,8 +14,8 @@ resources:
          commit: true
 #          pullRequestCreate: true
 #          pullRequestClose: true
-         releaseCreate: true
-         tagCreate: false
+#          releaseCreate: true
+#          tagCreate: false
       shallowDepth: 10  # optional 
 
   - name: gitres
@@ -31,11 +31,48 @@ resources:
         exclude: readme
       buildOn:  # optional
          commit: false
-         pullRequestCreate: true
-         pullRequestClose: true
-         releaseCreate: true
-         tagCreate: false
+#          pullRequestCreate: true
+#          pullRequestClose: true
+#          releaseCreate: true
+#          tagCreate: false
       shallowDepth: 10  # optional 
+
+  - name: gitpullcreate
+    type: GitRepo
+    configuration:
+      gitProvider: git
+      path: vijayreddy1991/dummy
+      files:  # optional
+#         include: pipelines.sh
+        exclude: readme
+      branches:  # optional
+        include: master 
+        exclude: readme
+      buildOn:  # optional
+#          commit: false
+         pullRequestCreate: true
+#          releaseCreate: true
+#          tagCreate: false
+      shallowDepth: 10  # optional 
+      
+  - name: gitpullclose
+    type: GitRepo
+    configuration:
+      gitProvider: git
+      path: vijayreddy1991/dummy
+      files:  # optional
+#         include: pipelines.sh
+        exclude: readme
+      branches:  # optional
+        include: master 
+        exclude: readme
+      buildOn:  # optional
+#          commit: false
+#          pullRequestCreate: true
+         pullRequestClose: true
+#          releaseCreate: true
+#          tagCreate: false
+      shallowDepth: 10  # optional       
 
 pipelines:
 
@@ -67,3 +104,31 @@ pipelines:
         execution:              
           onExecute:
             - printenv
+            
+  - name: pipelines_Pullcreate
+    steps:
+      - name: s_BashTriggercreate
+        type: Bash
+        configuration:
+          environmentVariables:
+            env1: value1
+            env2: value2
+          inputResources:
+            - name: gitpullcreate
+        execution:              
+          onExecute:
+            - printenv     
+            
+  - name: pipelines_pullclose
+    steps:
+      - name: s_BashTriggerclose
+        type: Bash
+        configuration:
+          environmentVariables:
+            env1: value1
+            env2: value2
+          inputResources:
+            - name: gitpullclose
+        execution:              
+          onExecute:
+            - printenv            
