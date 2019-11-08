@@ -9,7 +9,7 @@ resources:
         exclude: readme
       branches:  # optional
         include: master 
-        exclude: readme
+#         exclude: readme
       buildOn:  # optional
          commit: true
 #          pullRequestCreate: true
@@ -28,7 +28,7 @@ resources:
         exclude: readme
       branches:  # optional
         include: master 
-        exclude: readme
+#         exclude: readme
       buildOn:  # optional
          commit: false
 #          pullRequestCreate: true
@@ -47,7 +47,7 @@ resources:
         exclude: readme
       branches:  # optional
         include: master 
-        exclude: readme
+#         exclude: readme
       buildOn:  # optional
 #          commit: false
          pullRequestCreate: true
@@ -65,7 +65,7 @@ resources:
         exclude: readme
       branches:  # optional
         include: master 
-        exclude: readme
+#         exclude: readme
       buildOn:  # optional
 #          commit: false
          pullRequestCreate: false
