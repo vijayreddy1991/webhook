@@ -12,8 +12,8 @@ resources:
         exclude: readme
       buildOn:  # optional
          commit: true
-         pullRequestCreate: true
-         pullRequestClose: true
+#          pullRequestCreate: true
+#          pullRequestClose: true
          releaseCreate: true
          tagCreate: false
       shallowDepth: 10  # optional 
