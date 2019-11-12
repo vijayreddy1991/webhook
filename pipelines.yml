@@ -3,13 +3,13 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: git
-      path: vijayreddy1991/webhookcommit
+      path: vijayreddy1991/dummy
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
       branches:  # optional
         include: master 
-#         exclude: readme
+        exclude: test
       buildOn:  # optional
          commit: true
 #          pullRequestCreate: true
@@ -22,13 +22,13 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: git
-      path: vijayreddy1991/webhookcommit
+      path: vijayreddy1991/dummy
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
       branches:  # optional
         include: master 
-#         exclude: readme
+        exclude: test
       buildOn:  # optional
          commit: false
 #          pullRequestCreate: true
@@ -46,8 +46,8 @@ resources:
 #         include: pipelines.sh
         exclude: readme
       branches:  # optional
-        include: master 
-#         exclude: readme
+        include: test 
+#         exclude: test
       buildOn:  # optional
 #          commit: false
          pullRequestCreate: true
@@ -64,7 +64,7 @@ resources:
 #         include: pipelines.sh
         exclude: readme
       branches:  # optional
-        include: master 
+        include: test 
 #         exclude: readme
       buildOn:  # optional
 #          commit: false
@@ -82,7 +82,7 @@ resources:
 #         include: pipelines.sh
         exclude: readme
       branches:  # optional
-        include: master 
+        include: test 
         exclude: readme
       buildOn:  # optional
 #          commit: false
@@ -101,7 +101,7 @@ resources:
 #         include: pipelines.sh
         exclude: readme
       branches:  # optional
-        include: master 
+        include: test 
         exclude: readme
       buildOn:  # optional
 #          commit: false
