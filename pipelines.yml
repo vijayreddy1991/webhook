@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: s_gitHub
-      path: vijayreddy1991/dummy
+      path: vijayreddy1991/webhookcommit
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
@@ -22,7 +22,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: s_gitHub
-      path: vijayreddy1991/dummy
+      path: vijayreddy1991/webhookcommit
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
