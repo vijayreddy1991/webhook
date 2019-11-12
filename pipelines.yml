@@ -2,7 +2,7 @@ resources:
   - name: gitresource
     type: GitRepo
     configuration:
-      gitProvider: git
+      gitProvider: s_gitHub
       path: vijayreddy1991/dummy
       files:  # optional
 #         include: pipelines.sh
@@ -21,7 +21,7 @@ resources:
   - name: gitres
     type: GitRepo
     configuration:
-      gitProvider: git
+      gitProvider: s_gitHub
       path: vijayreddy1991/dummy
       files:  # optional
 #         include: pipelines.sh
@@ -40,7 +40,7 @@ resources:
   - name: gitpullcreatetrue
     type: GitRepo
     configuration:
-      gitProvider: git
+      gitProvider: s_gitHub
       path: vijayreddy1991/dummy
       files:  # optional
 #         include: pipelines.sh
@@ -58,7 +58,7 @@ resources:
   - name: gitpullcreatefalse
     type: GitRepo
     configuration:
-      gitProvider: git
+      gitProvider: s_gitHub
       path: vijayreddy1991/dummy
       files:  # optional
 #         include: pipelines.sh
@@ -76,7 +76,7 @@ resources:
   - name: gitpullclosetrue
     type: GitRepo
     configuration:
-      gitProvider: git
+      gitProvider: s_gitHub
       path: vijayreddy1991/dummy
       files:  # optional
 #         include: pipelines.sh
@@ -95,7 +95,7 @@ resources:
   - name: gitpullclosefalse
     type: GitRepo
     configuration:
-      gitProvider: git
+      gitProvider: s_gitHub
       path: vijayreddy1991/dummy
       files:  # optional
 #         include: pipelines.sh
