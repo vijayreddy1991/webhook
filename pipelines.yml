@@ -9,7 +9,7 @@ resources:
         exclude: readme
       branches:  # optional
         include: master 
-        exclude: test
+        exclude: readme
       buildOn:  # optional
          commit: true
 #          pullRequestCreate: true
@@ -28,7 +28,7 @@ resources:
         exclude: readme
       branches:  # optional
         include: master 
-        exclude: test
+        exclude: readme
       buildOn:  # optional
          commit: false
 #          pullRequestCreate: true
@@ -46,7 +46,7 @@ resources:
 #         include: pipelines.sh
         exclude: readme
       branches:  # optional
-        include: test 
+        include: master 
 #         exclude: test
       buildOn:  # optional
 #          commit: false
@@ -64,7 +64,7 @@ resources:
 #         include: pipelines.sh
         exclude: readme
       branches:  # optional
-        include: test 
+        include: master
 #         exclude: readme
       buildOn:  # optional
 #          commit: false
@@ -82,7 +82,7 @@ resources:
 #         include: pipelines.sh
         exclude: readme
       branches:  # optional
-        include: test 
+        include: master
         exclude: readme
       buildOn:  # optional
 #          commit: false
@@ -101,7 +101,7 @@ resources:
 #         include: pipelines.sh
         exclude: readme
       branches:  # optional
-        include: test 
+        include: master
         exclude: readme
       buildOn:  # optional
 #          commit: false
