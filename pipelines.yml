@@ -216,6 +216,8 @@ pipelines:
         configuration:
           inputResources:
             - name: test_Image
+          inputSteps:
+            - name: s_BashTriggerTrue
         execution:
           onExecute:
             - printenv 
