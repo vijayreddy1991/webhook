@@ -1,4 +1,11 @@
 resources:
+  - name: test_Image
+    type: Image
+    configuration:
+      registry: i_dockerRegistry
+      imageName: shippabledocker/sample_node_pvt
+      imageTag: master
+      
   - name: gitresource
     type: GitRepo
     configuration:
@@ -203,7 +210,15 @@ pipelines:
         execution:
           onExecute:
             - printenv 
-
+      
+      - name: test_image
+        type: Bash
+        configuration:
+          inputResources:
+            - name: test_Image
+        execution:
+          onExecute:
+            - printenv 
 
   - name: pipelines_False
     steps:
