@@ -53,7 +53,7 @@ resources:
         include: master 
 #         exclude: test
       buildOn:  # optional
-#          commit: false
+         commit: false
          pullRequestCreate: true
 #          releaseCreate: true
 #          tagCreate: false
