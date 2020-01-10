@@ -207,6 +207,7 @@ pipelines:
         execution:
           onExecute:
             - printenv 
+            - git log
 
   - name: pipelines_False
     steps:
