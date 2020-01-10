@@ -11,6 +11,9 @@ resources:
       branches:  # optional
         include: master 
         exclude: readme
+      tags:  # optional
+        include: v*
+        exclude: m*      
       buildOn:  # optional
          commit: true
 #          pullRequestCreate: true
