@@ -6,7 +6,7 @@ resources:
       gitProvider: s_gitHub
       path: vijayreddy1991/dummy
       files:  # optional
-#         include: pipelines.sh
+        include: pipelines.sh
         exclude: readme
       branches:  # optional
         include: master 
@@ -14,13 +14,13 @@ resources:
       tags:  # optional
         include: v*
         exclude: m*      
-      buildOn:  # optional
-         commit: true
+#       buildOn:  # optional
+#          commit: true
 #          pullRequestCreate: true
 #          pullRequestClose: true
 #          releaseCreate: true
 #          tagCreate: false
-      shallowDepth: 1  # optional 
+#       shallowDepth: 1  # optional 
 
   - name: gitres
     type: GitRepo
