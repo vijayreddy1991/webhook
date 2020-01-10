@@ -13,7 +13,7 @@ resources:
         exclude: readme
       tags:  # optional
         include: v*
-#         exclude: m*      
+        exclude: m*      
       buildOn:  # optional
          commit: true
 #          pullRequestCreate: true
