@@ -54,7 +54,7 @@ resources:
          pullRequestCreate: true
 #          releaseCreate: true
 #          tagCreate: false
-      shallowDepth: 10  # optional 
+#       shallowDepth: 10  # optional 
 
   - name: gitpullcreatefalse
     type: GitRepo
@@ -91,7 +91,7 @@ resources:
          pullRequestClose: true
 #          releaseCreate: true
 #          tagCreate: false
-      shallowDepth: 10  # optional   
+      shallowDepth: 20  # optional   
       
   - name: gitpullclosefalse
     type: GitRepo
