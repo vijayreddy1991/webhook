@@ -20,7 +20,7 @@ resources:
 #          pullRequestClose: true
 #          releaseCreate: true
 #          tagCreate: false
-#       shallowDepth: 10  # optional 
+      shallowDepth: 1  # optional 
 
   - name: gitres
     type: GitRepo
