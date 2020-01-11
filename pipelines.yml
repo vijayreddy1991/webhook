@@ -20,7 +20,7 @@ resources:
 #          pullRequestClose: true
 #          releaseCreate: true
         tagCreate: true
-      shallowDepth: 1  # optional 
+      shallowDepth: 0  # optional 
 
   - name: gittagcreatetrue
     type: GitRepo
