@@ -20,7 +20,7 @@ resources:
 #          pullRequestClose: true
 #          releaseCreate: true
         tagCreate: true
-      shallowDepth: 2  # optional 
+      shallowDepth: 1  # optional 
 
   - name: gittagcreatetrue
     type: GitRepo
@@ -61,7 +61,7 @@ pipelines:
             - git clone https://github.com/vijayreddy1991/dummy.git
             - cd dummy
             - ls
-            - cat pipeline.sh            
+            - cat pipelines.sh            
             
   - name: pipelines_tagcreatetrue
     steps:
