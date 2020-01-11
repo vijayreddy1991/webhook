@@ -19,7 +19,7 @@ resources:
 #          pullRequestCreate: true
 #          pullRequestClose: true
 #          releaseCreate: true
-#          tagCreate: false
+        tagCreate: true
       shallowDepth: 1  # optional 
 
   - name: gittagcreatetrue
