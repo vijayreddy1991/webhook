@@ -5,12 +5,12 @@ resources:
     configuration:
       gitProvider: s_gitHub
       path: vijayreddy1991/dummy
-#       files:  # optional
-#         include: pipelines.sh
-#         exclude: readme
-#       branches:  # optional
-#         include: master 
-#         exclude: readme
+      files:  # optional
+        include: pipelines.sh
+        exclude: readme
+      branches:  # optional
+        include: master 
+        exclude: readme
       tags:  # optional
         include: v.*
         exclude: m.*      
@@ -58,6 +58,10 @@ pipelines:
         execution:
           onExecute:
             - printenv 
+            - git clone https://github.com/vijayreddy1991/dummy.git
+            - cd dummy
+            - ls
+            - cat pipeline.sh            
             
   - name: pipelines_tagcreatetrue
     steps:
@@ -71,6 +75,7 @@ pipelines:
             - name: gittagcreatetrue
         execution:              
           onExecute:
-            - echo "Hi"            
+            - echo "Hi"      
+
 
           
