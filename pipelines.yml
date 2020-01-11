@@ -22,7 +22,7 @@ resources:
         tagCreate: true
       shallowDepth: 0  # optional 
 
- - name: gitres
+  - name: gitres
     type: GitRepo
     configuration:
       gitProvider: s_gitHub
