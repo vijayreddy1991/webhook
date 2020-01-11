@@ -22,6 +22,99 @@ resources:
         tagCreate: true
       shallowDepth: 0  # optional 
 
+ - name: gitres
+    type: GitRepo
+    configuration:
+      gitProvider: s_gitHub
+      path: vijayreddy1991/dummy
+      files:  # optional
+#         include: pipelines.sh
+        exclude: readme
+      branches:  # optional
+        include: master 
+        exclude: readme
+      buildOn:  # optional
+         commit: false
+#          pullRequestCreate: true
+#          pullRequestClose: true
+#          releaseCreate: true
+#          tagCreate: false
+      shallowDepth: 10  # optional 
+
+  - name: gitpullcreatetrue
+    type: GitRepo
+    configuration:
+      gitProvider: s_gitHub
+      path: vijayreddy1991/dummy
+      files:  # optional
+#         include: pipelines.sh
+        exclude: readme
+      branches:  # optional
+        include: master 
+#         exclude: test
+      buildOn:  # optional
+         commit: false
+         pullRequestCreate: true
+#          releaseCreate: true
+#          tagCreate: false
+#       shallowDepth: 10  # optional 
+
+  - name: gitpullcreatefalse
+    type: GitRepo
+    configuration:
+      gitProvider: s_gitHub
+      path: vijayreddy1991/dummy
+      files:  # optional
+#         include: pipelines.sh
+        exclude: readme
+      branches:  # optional
+        include: master
+#         exclude: readme
+      buildOn:  # optional
+         commit: false
+         pullRequestCreate: false
+#          releaseCreate: true
+#          tagCreate: false
+      shallowDepth: 10  # optional 
+
+  - name: gitpullclosetrue
+    type: GitRepo
+    configuration:
+      gitProvider: s_gitHub
+      path: vijayreddy1991/dummy
+      files:  # optional
+#         include: pipelines.sh
+        exclude: readme
+      branches:  # optional
+        include: master
+        exclude: readme
+      buildOn:  # optional
+         commit: false
+#          pullRequestCreate: true
+         pullRequestClose: true
+#          releaseCreate: true
+#          tagCreate: false
+      shallowDepth: 20  # optional   
+
+  - name: gitpullclosefalse
+    type: GitRepo
+    configuration:
+      gitProvider: s_gitHub
+      path: vijayreddy1991/dummy
+      files:  # optional
+#         include: pipelines.sh
+        exclude: readme
+      branches:  # optional
+        include: master
+        exclude: readme
+      buildOn:  # optional
+         commit: false
+#          pullRequestCreate: true
+         pullRequestClose: false
+#          releaseCreate: true
+#          tagCreate: false
+      shallowDepth: 10  # optional     
+
   - name: gittagcreatetrue
     type: GitRepo
     configuration:
@@ -39,7 +132,64 @@ resources:
 #          pullRequestClose: false
 #          releaseCreate: true
          tagCreate: true
-      shallowDepth: 10  # optional  
+      shallowDepth: 10  # optional        
+
+  - name: gittagcreatefalse
+    type: GitRepo
+    configuration:
+      gitProvider: s_gitHub
+      path: vijayreddy1991/dummy
+      files:  # optional
+#         include: pipelines.sh
+        exclude: readme
+      branches:  # optional
+        include: master
+        exclude: readme
+      buildOn:  # optional
+         commit: false
+#          pullRequestCreate: true
+#          pullRequestClose: false
+#          releaseCreate: 
+         tagCreate: false
+      shallowDepth: 10  # optional 
+
+  - name: gitreleasecreatetrue
+    type: GitRepo
+    configuration:
+      gitProvider: s_gitHub
+      path: vijayreddy1991/dummy
+      files:  # optional
+#         include: pipelines.sh
+        exclude: readme
+      branches:  # optional
+        include: master
+        exclude: readme
+      buildOn:  # optional
+         commit: false
+#          pullRequestCreate: true
+#          pullRequestClose: false
+         releaseCreate: true
+#          tagCreate: true
+      shallowDepth: 10  # optional        
+
+  - name: gitreleasecreatefalse
+    type: GitRepo
+    configuration:
+      gitProvider: s_gitHub
+      path: vijayreddy1991/dummy
+      files:  # optional
+#         include: pipelines.sh
+        exclude: readme
+      branches:  # optional
+        include: master
+        exclude: readme
+      buildOn:  # optional
+         commit: false
+#          pullRequestCreate: true
+#          pullRequestClose: false
+         releaseCreate: false
+#          tagCreate: false
+      shallowDepth: 10  # optiona
 
 
 pipelines:
@@ -64,6 +214,76 @@ pipelines:
             - ls
             - cat pipelines.sh            
             
+  - name: pipelines_Pullcreatetrue
+    steps:
+      - name: s_BashTriggercreatetrue
+        type: Bash
+        configuration:
+          environmentVariables:
+            env1: value1
+            env2: value2
+          inputResources:
+            - name: gitpullcreatetrue
+        execution:              
+          onExecute:
+            - printenv     
+
+  - name: pipelines_pullclosetrue
+    steps:
+      - name: s_BashTriggerclosetrue
+        type: Bash
+        configuration:
+          environmentVariables:
+            env1: value1
+            env2: value2
+          inputResources:
+            - name: gitpullclosetrue
+        execution:              
+          onExecute:
+            - printenv 
+
+  - name: pipelines_Pullcreatefalse
+    steps:
+      - name: s_BashTriggercreatefalse
+        type: Bash
+        configuration:
+          environmentVariables:
+            env1: value1
+            env2: value2
+          inputResources:
+            - name: gitpullcreatefalse
+        execution:              
+          onExecute:
+            - printenv     
+
+  - name: pipelines_pullclosefalse
+    steps:
+      - name: s_BashTriggerclosefalse
+        type: Bash
+        configuration:
+          environmentVariables:
+            env1: value1
+            env2: value2
+          inputResources:
+            - name: gitpullclosefalse
+        execution:              
+          onExecute:
+            - printenv        
+
+  - name: pipelines_tagcreatefalse
+    steps:
+      - name: s_Bashtagcreatefalse
+        type: Bash
+        configuration:
+          environmentVariables:
+            env1: value1
+            env2: value2
+          inputResources:
+            - name: gittagcreatefalse
+        execution:              
+          onExecute:
+            - printenv     
+
   - name: pipelines_tagcreatetrue
     steps:
       - name: s_Bashtagcreatetrue
@@ -76,7 +296,35 @@ pipelines:
             - name: gittagcreatetrue
         execution:              
           onExecute:
-            - echo "Hi"      
+            - printenv  
+
+  - name: pipelines_releasecreatefalse
+    steps:
+      - name: s_Bashreleasecreatefalse
+        type: Bash
+        configuration:
+          environmentVariables:
+            env1: value1
+            env2: value2
+          inputResources:
+            - name: gitreleasecreatefalse
+        execution:              
+          onExecute:
+            - printenv     
+
+  - name: pipelines_releasecreatetrue
+    steps:
+      - name: s_Bashreleasecreatetrue
+        type: Bash
+        configuration:
+          environmentVariables:
+            env1: value1
+            env2: value2
+          inputResources:
+            - name: gitreleasecreatetrue
+        execution:              
+          onExecute:
+            - printenv     
 
 
           
