@@ -208,8 +208,7 @@ pipelines:
         execution:
           onExecute:
             - printenv 
-            - git clone https://github.com/vijayreddy1991/dummy.git
-            - cd dummy
+            - pushd $res_gitresource_resourcePath
             - git log
             - ls
             - cat pipelines.sh            
