@@ -60,6 +60,7 @@ pipelines:
             - printenv 
             - git clone https://github.com/vijayreddy1991/dummy.git
             - cd dummy
+            - git log
             - ls
             - cat pipelines.sh            
             
