@@ -12,7 +12,7 @@ resources:
 #         include: master 
 #         exclude: readme
       tags:  # optional
-        include: /v.*/g
+        include: v.*/g
         exclude: m.*      
       buildOn:  # optional
         commit: true
