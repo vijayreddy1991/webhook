@@ -9,7 +9,7 @@ resources:
         include: pipelines.sh
         exclude: readme
       branches:  # optional
-        include: master 
+        include: test
         exclude: readme
       tags:  # optional
         include: v.*
