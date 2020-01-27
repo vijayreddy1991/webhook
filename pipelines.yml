@@ -6,11 +6,11 @@ resources:
       gitProvider: s_gitHub
       path: vijayreddy1991/dummy
       files:  # optional
-        include: pipelines.sh
-        exclude: readme
+        include: p.*
+        exclude: r.*
       branches:  # optional
-        include: test
-        exclude: readme
+        include: t.*
+        exclude: r.*
       tags:  # optional
         include: v.*
         exclude: m.*      
