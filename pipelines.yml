@@ -9,7 +9,7 @@ resources:
         include: p.*
         exclude: r.*
       branches:  # optional
-        include: t.*
+        include: m.*
         exclude: r.*
       tags:  # optional
         include: v.*
