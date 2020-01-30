@@ -7,13 +7,10 @@ resources:
       path: vijayreddy1991/dummy
       files:  # optional
         include: pipeline.*
-        exclude: r.*
       branches:  # optional
         include: master
-        exclude: r.*
       tags:  # optional
-        include: v.*
-        exclude: m.*      
+        include: v.* 
       buildOn:  # optional
         commit: true
 #          pullRequestCreate: true
