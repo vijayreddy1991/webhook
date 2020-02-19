@@ -3,7 +3,7 @@ resources:
   - name: gitresource
     type: GitRepo
     configuration:
-      gitProvider: s_gitHub
+      gitProvider: s_git
       path: vijayreddy1991/dummy
       files:  # optional
         include: pipeline.*
@@ -22,7 +22,7 @@ resources:
   - name: gitres
     type: GitRepo
     configuration:
-      gitProvider: s_gitHub
+      gitProvider: s_git
       path: vijayreddy1991/dummy
       files:  # optional
 #         include: pipelines.sh
@@ -41,7 +41,7 @@ resources:
   - name: gitpullcreatetrue
     type: GitRepo
     configuration:
-      gitProvider: s_gitHub
+      gitProvider: s_git
       path: vijayreddy1991/dummy
       files:  # optional
 #         include: pipelines.sh
@@ -59,7 +59,7 @@ resources:
   - name: gitpullcreatefalse
     type: GitRepo
     configuration:
-      gitProvider: s_gitHub
+      gitProvider: s_git
       path: vijayreddy1991/dummy
       files:  # optional
 #         include: pipelines.sh
@@ -77,7 +77,7 @@ resources:
   - name: gitpullclosetrue
     type: GitRepo
     configuration:
-      gitProvider: s_gitHub
+      gitProvider: s_git
       path: vijayreddy1991/dummy
       files:  # optional
 #         include: pipelines.sh
@@ -96,7 +96,7 @@ resources:
   - name: gitpullclosefalse
     type: GitRepo
     configuration:
-      gitProvider: s_gitHub
+      gitProvider: s_git
       path: vijayreddy1991/dummy
       files:  # optional
 #         include: pipelines.sh
@@ -115,7 +115,7 @@ resources:
   - name: gittagcreatetrue
     type: GitRepo
     configuration:
-      gitProvider: s_gitHub
+      gitProvider: s_git
       path: vijayreddy1991/dummy
       files:  # optional
 #         include: pipelines.sh
@@ -134,7 +134,7 @@ resources:
   - name: gittagcreatefalse
     type: GitRepo
     configuration:
-      gitProvider: s_gitHub
+      gitProvider: s_git
       path: vijayreddy1991/dummy
       files:  # optional
 #         include: pipelines.sh
@@ -153,7 +153,7 @@ resources:
   - name: gitreleasecreatetrue
     type: GitRepo
     configuration:
-      gitProvider: s_gitHub
+      gitProvider: s_git
       path: vijayreddy1991/dummy
       files:  # optional
 #         include: pipelines.sh
@@ -172,7 +172,7 @@ resources:
   - name: gitreleasecreatefalse
     type: GitRepo
     configuration:
-      gitProvider: s_gitHub
+      gitProvider: s_git
       path: vijayreddy1991/dummy
       files:  # optional
 #         include: pipelines.sh
