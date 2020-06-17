@@ -220,7 +220,7 @@ pipelines:
             env1: value1
             env2: value2
           inputResources:
-            - name: gitresource
+            - name: gitres
         execution:
           onExecute:
             - printenv 
