@@ -208,7 +208,26 @@ pipelines:
             - pushd $res_gitresource_resourcePath
             - git log
             - ls
-            - cat pipelines.sh            
+            - cat pipelines.sh    
+
+  - name: pipelines_false
+  
+    steps:
+      - name: s_BashTriggerFalse
+        type: Bash
+        configuration:
+          environmentVariables:
+            env1: value1
+            env2: value2
+          inputResources:
+            - name: gitresource
+        execution:
+          onExecute:
+            - printenv 
+            - pushd $res_gitresource_resourcePath
+            - git log
+            - ls
+            - cat pipelines.sh         
             
   - name: pipelines_Pullcreatetrue
     steps:
