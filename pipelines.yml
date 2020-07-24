@@ -9,6 +9,7 @@ resources:
         include: pipeline.*
       branches:  # optional
         include: master
+        exclude: readme        
       tags:  # optional
         include: v.* 
       buildOn:  # optional
