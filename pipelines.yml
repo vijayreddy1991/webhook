@@ -124,6 +124,9 @@ resources:
       branches:  # optional
         include: master
         exclude: readme
+      tags:  # optional
+        exclude: m.*      
+        include: v.*         
       buildOn:  # optional
          commit: false
 #          pullRequestCreate: true
