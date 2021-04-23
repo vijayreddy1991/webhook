@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: s_git
-      path: vijayreddy1991/dummy
+      path: neha-mishraa/dummy
       files:  # optional
         include: pipeline.*
       branches:  # optional
@@ -23,7 +23,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: s_git
-      path: vijayreddy1991/dummy
+      path: neha-mishraa/dummy
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
@@ -42,7 +42,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: s_git
-      path: vijayreddy1991/dummy
+      path: neha-mishraa/dummy
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
@@ -60,7 +60,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: s_git
-      path: vijayreddy1991/dummy
+      path: neha-mishraa/dummy
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
@@ -78,7 +78,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: s_git
-      path: vijayreddy1991/dummy
+      path: neha-mishraa/dummy
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
@@ -97,7 +97,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: s_git
-      path: vijayreddy1991/dummy
+      path: neha-mishraa/dummy
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
@@ -116,7 +116,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: s_git
-      path: vijayreddy1991/dummy
+      path: neha-mishraa/dummy
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
@@ -138,7 +138,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: s_git
-      path: vijayreddy1991/dummy
+      path: neha-mishraa/dummy
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
@@ -157,7 +157,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: s_git
-      path: vijayreddy1991/dummy
+      path: neha-mishraa/dummy
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
@@ -176,7 +176,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: s_git
-      path: vijayreddy1991/dummy
+      path: neha-mishraa/dummy
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
