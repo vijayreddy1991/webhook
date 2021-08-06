@@ -18,6 +18,7 @@ resources:
 #          releaseCreate: true
         tagCreate: true
       shallowDepth: 1  # optional 
+      cloneProtocol: https      
 
   - name: gitres
     type: GitRepo
@@ -37,6 +38,7 @@ resources:
 #          releaseCreate: true
 #          tagCreate: false
       shallowDepth: 10  # optional 
+      cloneProtocol: https      
 
   - name: gitpullcreatetrue
     type: GitRepo
@@ -55,6 +57,7 @@ resources:
 #          releaseCreate: true
 #          tagCreate: false
 #       shallowDepth: 10  # optional 
+      cloneProtocol: https
 
   - name: gitpullcreatefalse
     type: GitRepo
@@ -73,6 +76,7 @@ resources:
 #          releaseCreate: true
 #          tagCreate: false
       shallowDepth: 10  # optional 
+      cloneProtocol: https      
 
   - name: gitpullclosetrue
     type: GitRepo
@@ -92,6 +96,7 @@ resources:
 #          releaseCreate: true
 #          tagCreate: false
       shallowDepth: 20  # optional   
+      cloneProtocol: https      
 
   - name: gitpullclosefalse
     type: GitRepo
@@ -111,6 +116,7 @@ resources:
 #          releaseCreate: true
 #          tagCreate: false
       shallowDepth: 10  # optional     
+      cloneProtocol: https      
 
   - name: gittagcreatetrue
     type: GitRepo
@@ -132,7 +138,8 @@ resources:
 #          pullRequestClose: false
 #          releaseCreate: true
          tagCreate: true
-      shallowDepth: 10  # optional        
+      shallowDepth: 10  # optional   
+      cloneProtocol: https      
 
   - name: gittagcreatefalse
     type: GitRepo
@@ -152,6 +159,7 @@ resources:
 #          releaseCreate: 
          tagCreate: false
       shallowDepth: 10  # optional 
+      cloneProtocol: https      
 
   - name: gitreleasecreatetrue
     type: GitRepo
@@ -170,7 +178,8 @@ resources:
 #          pullRequestClose: false
          releaseCreate: true
 #          tagCreate: true
-      shallowDepth: 10  # optional        
+      shallowDepth: 10  # optional   
+      cloneProtocol: https      
 
   - name: gitreleasecreatefalse
     type: GitRepo
@@ -190,6 +199,7 @@ resources:
          releaseCreate: false
 #          tagCreate: false
       shallowDepth: 10  # optiona
+      cloneProtocol: https      
 
 
 pipelines:
