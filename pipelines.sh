@@ -1,1 +1,1 @@
-sudosudo
+sudo
