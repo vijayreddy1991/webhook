@@ -1,29 +1,34 @@
-resources:    
-  - name: vijay
+                       
+resources:
+      
+  - name: gitresource
     type: GitRepo
     configuration:
-      gitProvider: s_git
-      path: neha-mishraa/dummy
+      gitProvider: github_neha
+      path: neha-mishraa/webhook  
       files:  # optional
-        include: pipeline.*
+        include: pipelines.sh
+        exclude: readme
       branches:  # optional
-        include: master
-        exclude: readme        
+        include: master 
+       # exclude: readme
       tags:  # optional
-        include: v.* 
+        include: v*
+        exclude: m*  
       buildOn:  # optional
-        commit: true
+         commit: true
 #          pullRequestCreate: true
 #          pullRequestClose: true
 #          releaseCreate: true
-        tagCreate: true
-      shallowDepth: 1  # optional 
+#          tagCreate: false
+#       shallowDepth: 10  # optional 
+      cloneProtocol: https
 
   - name: gitres
     type: GitRepo
     configuration:
-      gitProvider: s_git
-      path: neha-mishraa/dummy
+      gitProvider: github_neha
+      path: neha-mishraa/webhook  
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
@@ -37,12 +42,13 @@ resources:
 #          releaseCreate: true
 #          tagCreate: false
       shallowDepth: 10  # optional 
+      cloneProtocol: https      
 
   - name: gitpullcreatetrue
     type: GitRepo
     configuration:
-      gitProvider: s_git
-      path: neha-mishraa/dummy
+      gitProvider: github_neha
+      path: neha-mishraa/webhook  
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
@@ -50,17 +56,18 @@ resources:
         include: master 
 #         exclude: test
       buildOn:  # optional
-         commit: false
-         pullRequestCreate: true
+          commit: false
+          pullRequestCreate: true
 #          releaseCreate: true
 #          tagCreate: false
-#       shallowDepth: 10  # optional 
+      shallowDepth: 10  # optional 
+      cloneProtocol: https      
 
   - name: gitpullcreatefalse
     type: GitRepo
     configuration:
-      gitProvider: s_git
-      path: neha-mishraa/dummy
+      gitProvider: github_neha
+      path: neha-mishraa/webhook  
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
@@ -68,17 +75,18 @@ resources:
         include: master
 #         exclude: readme
       buildOn:  # optional
-         commit: false
-         pullRequestCreate: false
+          commit: false
+          pullRequestCreate: false
 #          releaseCreate: true
 #          tagCreate: false
       shallowDepth: 10  # optional 
-
+      cloneProtocol: https      
+      
   - name: gitpullclosetrue
     type: GitRepo
     configuration:
-      gitProvider: s_git
-      path: neha-mishraa/dummy
+      gitProvider: github_neha
+      path: neha-mishraa/webhook  
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
@@ -86,18 +94,15 @@ resources:
         include: master
         exclude: readme
       buildOn:  # optional
-         commit: false
-#          pullRequestCreate: true
-         pullRequestClose: true
-#          releaseCreate: true
-#          tagCreate: false
-      shallowDepth: 20  # optional   
-
+          commit: false
+          pullRequestClose: true  
+      cloneProtocol: https          
+      
   - name: gitpullclosefalse
     type: GitRepo
     configuration:
-      gitProvider: s_git
-      path: neha-mishraa/dummy
+      gitProvider: github_neha
+      path: neha-mishraa/webhook  
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
@@ -105,40 +110,37 @@ resources:
         include: master
         exclude: readme
       buildOn:  # optional
-         commit: false
+          commit: false
 #          pullRequestCreate: true
-         pullRequestClose: false
-#          releaseCreate: true
-#          tagCreate: false
-      shallowDepth: 10  # optional     
-
+          pullRequestClose: false
+#          releaseCreate: true   
+      cloneProtocol: https
+      
   - name: gittagcreatetrue
     type: GitRepo
     configuration:
-      gitProvider: s_git
-      path: neha-mishraa/dummy
+      gitProvider: github_neha
+      path: neha-mishraa/webhook  
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
       branches:  # optional
         include: master
         exclude: readme
-      tags:  # optional
-        exclude: m.*      
-        include: v.*         
       buildOn:  # optional
-         commit: false
+          commit: false
 #          pullRequestCreate: true
 #          pullRequestClose: false
 #          releaseCreate: true
-         tagCreate: true
-      shallowDepth: 10  # optional        
+          tagCreate: true
+      shallowDepth: 10  # optional   
+      cloneProtocol: https      
 
   - name: gittagcreatefalse
     type: GitRepo
     configuration:
-      gitProvider: s_git
-      path: neha-mishraa/dummy
+      gitProvider: github_neha
+      path: neha-mishraa/webhook  
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
@@ -146,18 +148,19 @@ resources:
         include: master
         exclude: readme
       buildOn:  # optional
-         commit: false
+          commit: false
 #          pullRequestCreate: true
 #          pullRequestClose: false
 #          releaseCreate: 
-         tagCreate: false
+          tagCreate: false
       shallowDepth: 10  # optional 
+      cloneProtocol: https      
 
   - name: gitreleasecreatetrue
     type: GitRepo
     configuration:
-      gitProvider: s_git
-      path: neha-mishraa/dummy
+      gitProvider: github_neha
+      path: neha-mishraa/webhook  
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
@@ -165,18 +168,19 @@ resources:
         include: master
         exclude: readme
       buildOn:  # optional
-         commit: false
+          commit: false
 #          pullRequestCreate: true
 #          pullRequestClose: false
-         releaseCreate: true
+          releaseCreate: true
 #          tagCreate: true
-      shallowDepth: 10  # optional        
+      shallowDepth: 10  # optional   
+      cloneProtocol: https      
 
   - name: gitreleasecreatefalse
     type: GitRepo
     configuration:
-      gitProvider: s_git
-      path: neha-mishraa/dummy
+      gitProvider: github_neha
+      path: neha-mishraa/webhook  
       files:  # optional
 #         include: pipelines.sh
         exclude: readme
@@ -184,13 +188,13 @@ resources:
         include: master
         exclude: readme
       buildOn:  # optional
-         commit: false
+          commit: false
 #          pullRequestCreate: true
 #          pullRequestClose: false
-         releaseCreate: false
+          releaseCreate: false
 #          tagCreate: false
       shallowDepth: 10  # optiona
-
+      cloneProtocol: https      
 
 pipelines:
 
@@ -204,17 +208,12 @@ pipelines:
             env1: value1
             env2: value2
           inputResources:
-            - name: vijay
+            - name: gitresource
         execution:
           onExecute:
             - printenv 
-            - pushd $res_vijay_resourcePath
-            - git log
-            - ls
-            - cat pipelines.sh    
 
-  - name: pipelines_false
-  
+  - name: pipelines_False
     steps:
       - name: s_BashTriggerFalse
         type: Bash
@@ -224,13 +223,9 @@ pipelines:
             env2: value2
           inputResources:
             - name: gitres
-        execution:
+        execution:              
           onExecute:
-            - printenv 
-            - pushd $res_gitresource_resourcePath
-            - git log
-            - ls
-            - cat pipelines.sh         
+            - printenv
             
   - name: pipelines_Pullcreatetrue
     steps:
@@ -245,7 +240,7 @@ pipelines:
         execution:              
           onExecute:
             - printenv     
-
+            
   - name: pipelines_pullclosetrue
     steps:
       - name: s_BashTriggerclosetrue
@@ -259,7 +254,7 @@ pipelines:
         execution:              
           onExecute:
             - printenv 
-
+            
   - name: pipelines_Pullcreatefalse
     steps:
       - name: s_BashTriggercreatefalse
@@ -273,7 +268,7 @@ pipelines:
         execution:              
           onExecute:
             - printenv     
-
+            
   - name: pipelines_pullclosefalse
     steps:
       - name: s_BashTriggerclosefalse
@@ -301,7 +296,7 @@ pipelines:
         execution:              
           onExecute:
             - printenv     
-
+            
   - name: pipelines_tagcreatetrue
     steps:
       - name: s_Bashtagcreatetrue
@@ -315,7 +310,7 @@ pipelines:
         execution:              
           onExecute:
             - printenv  
-
+            
   - name: pipelines_releasecreatefalse
     steps:
       - name: s_Bashreleasecreatefalse
@@ -329,7 +324,7 @@ pipelines:
         execution:              
           onExecute:
             - printenv     
-
+            
   - name: pipelines_releasecreatetrue
     steps:
       - name: s_Bashreleasecreatetrue
@@ -342,7 +337,4 @@ pipelines:
             - name: gitreleasecreatetrue
         execution:              
           onExecute:
-            - printenv     
-
-
-          
+            - printenv              
