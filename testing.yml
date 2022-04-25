@@ -1,0 +1,33 @@
+resources:    
+  - name: vijay
+    type: GitRepo
+    configuration:
+      gitProvider: s_git
+      path: vijayreddy1991/dummy
+      buildOn:  # optional
+        commit: true
+      cloneProtocol: https      
+
+
+
+pipelines:
+
+  - name: pipelines_true
+  
+    steps:
+      - name: s_BashTriggerTrue
+        type: Bash
+        configuration:
+          environmentVariables:
+            env1: value1
+            env2: value2
+          inputResources:
+            - name: vijay
+        execution:
+          onExecute:
+            - printenv 
+            - pushd $res_vijay_resourcePath
+            - git log
+            - ls
+            - cat pipelines.sh         
+  
