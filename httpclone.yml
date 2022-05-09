@@ -7,8 +7,8 @@ resources:
       files:  # optional
         include: pipeline.*
       branches:  # optional
-        include: master'
-        exclude: readme'        
+        include: master
+        exclude: readme     
       tags:  # optional
         include: v.* 
       buildOn:  # optional
