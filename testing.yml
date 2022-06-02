@@ -1,12 +1,21 @@
 resources:    
-  - name: vijay
+  - name: gittagcreatetrue
     type: GitRepo
     configuration:
       gitProvider: s_git
       path: vijayreddy1991/dummy
+      files:  # optional
+        exclude: readme
+      branches:  # optional
+        include: master
+        exclude: readme
+      tags:  # optional
+        exclude: m.*      
+        include: v.*         
       buildOn:  # optional
-        commit: true
-      cloneProtocol: https      
+         commit: false
+         tagCreate: true
+      shallowDepth: 10  # optional     
 
 
 
@@ -15,19 +24,15 @@ pipelines:
   - name: pipelines_true
   
     steps:
-      - name: s_BashTriggerTrue
+      - name: s_Bashtagcreatetrue
         type: Bash
         configuration:
           environmentVariables:
             env1: value1
             env2: value2
           inputResources:
-            - name: vijay
-        execution:
+            - name: gittagcreatetrue
+        execution:              
           onExecute:
-            - printenv 
-            - pushd $res_vijay_resourcePath
-            - git log
-            - ls
-            - cat pipelines.sh         
+            - printenv       
   
