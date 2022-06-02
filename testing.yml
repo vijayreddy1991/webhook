@@ -2,7 +2,7 @@ resources:
   - name: gittagcreatetrue
     type: GitRepo
     configuration:
-      gitProvider: s_git
+      gitProvider: vijay
       path: vijayreddy1991/dummy
       files:  # optional
         exclude: readme
