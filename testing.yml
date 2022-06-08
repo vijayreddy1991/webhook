@@ -3,19 +3,9 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: vijay
-      path: vijayreddy1991/dummy
-      files:  # optional
-        exclude: readme
-      branches:  # optional
-        include: master
-        exclude: readme
-      tags:  # optional
-        exclude: m.*      
-        include: v.*         
+      path: vijayreddy1991/dummy     
       buildOn:  # optional
-         commit: false
-         tagCreate: true
-      shallowDepth: 10  # optional     
+         tagCreate: true   
 
 
 
