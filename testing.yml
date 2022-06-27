@@ -6,6 +6,9 @@ resources:
       path: vijayreddy1991/dummy     
       buildOn:  # optional
          tagCreate: true   
+      tags:  # optional
+        exclude: m.*      
+        include: v.*           
 
 
 
