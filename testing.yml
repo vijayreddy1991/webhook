@@ -2,7 +2,7 @@ resources:
   - name: gittagcreatetrue
     type: GitRepo
     configuration:
-      gitProvider: vijay
+      gitProvider: s_git
       path: vijayreddy1991/dummy     
       buildOn:  # optional
          tagCreate: true   
